@@ -117,7 +117,7 @@ cmake --build build --config Release
 ```
 ------------------------------------------------------------------------
 ## Repository Structure
-
+```bash
 Tri-Beat-Application/
 ├─ CMakeLists.txt
 ├─ Source/
@@ -132,7 +132,7 @@ Tri-Beat-Application/
 ├─Tri-Beat.jucer
 ├─Tri-Beat_User_Manual.pdf
 └─ .gitignore
-
+```
 ------------------------------------------------------------------------
 ## Support / Feedback
 
