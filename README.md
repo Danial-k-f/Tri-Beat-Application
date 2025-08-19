@@ -8,11 +8,29 @@ shapes. Each shape represents a rhythmic cycle. By stacking multiple
 shapes, you can design complex grooves with accents, subdivisions, and
 user-loaded drum samples.
 
-Developed by **Danial Kooshki**, this application provides a visual and
-intuitive interface for rhythm creation.
-
 ------------------------------------------------------------------------
+## Features
 
+- **Layered Shapes:** Add/remove polygon layers; each layer can have its own number of sides.
+- **Polyrhythm / Polymeter Modes:** Switch between evenly distributing N points over a 4/4 host bar (polyrhythm) and advancing per-beat in the layer’s own meter (polymeter).
+- **Accents:** Click a vertex to set **Upbeat** (yellow), Shift+Click to set **Downbeat** (cyan). Unaccented vertices are grey; the orange dot is the playhead.
+- **Samples:** Load your own audio for **Upbeat Sample** (kick), **Downbeat Sample** (snare), and **Subdivision Sample** (hi‑hat). If not loaded, a synthetic click is used.
+- **Transport:** Play/Stop, 4/4 Metronome toggle, **Mute Subdivisions** toggle.
+- **Zoom:** In/Out buttons in the shape panel.
+- **Quick Tour:** Guided onboarding on first launch; press **F1** or use **Reset Tour** to see it again.
+------------------------------------------------------------------------
+## Requirements
+
+- **Operating System:** Windows 10/11 (x64)
+- **Build Toolchain (for source builds):**
+  - **CMake** ≥ 3.21
+  - **Visual Studio 2022** (Desktop development with C++) or Build Tools + MSVC v143
+  - **Windows 10 SDK**
+- **JUCE 8.0.x** (fetched automatically via CMake’s `FetchContent` by default)
+- **Audio Formats:** WAV/AIFF recommended (MP3 decode requires appropriate codecs on the system)
+
+> If you only want to run the app, see **Installation (Prebuilt)** below.
+> ------------------------------------------------------------------------
 ## Quick Start Guide
 
 ### 1. Transport Controls
@@ -75,18 +93,56 @@ If no sample is loaded, a synthetic click will play instead.
     press **F1**.
 
 ------------------------------------------------------------------------
+## Installation (Prebuilt)
 
-## Installation & Usage
+If you downloaded a packaged build from the repository or a GitHub Release:
 
-1.  Download and install Tri-Beat on your system.
-2.  Load your own samples (WAV/AIFF).
-3.  Add shapes, adjust sides, set accents, and experiment with layering.
-4.  Use metronome and mute toggles to refine rhythmic output.
+1. Go to the project root’s **`Dist/`** directory.
+2. Run the installer (e.g., `TriBeatInstaller.exe` or similar).
+3. Launch **Tri-Beat** from Start Menu or installation folder.
 
 ------------------------------------------------------------------------
+## Build from Source (Windows)
 
-## Credits
+> The project uses CMake and fetches JUCE automatically (default).  
+> Source files are under **`Source/`**.
 
+### 1) Clone
+
+```bash
+git clone https://github.com/Danial-k-f/Tri-Beat-Application.git
+cd Tri-Beat-Application
+cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+cmake --build build --config Release
+```
+------------------------------------------------------------------------
+## Repository Structure
+
+Tri-Beat-Application/
+├─ CMakeLists.txt
+├─ Source/
+│  ├─ Main.cpp
+│  ├─ MainComponent.h / .cpp
+│  ├─ OnboardingOverlay.h
+│  └─ (other headers/sources)
+├─ Dist/                  # optional: packaged installer(s), release artifacts
+├─ icon.ico
+├─ README.md
+├─ LICENSE                # MIT License
+├─Tri-Beat.jucer
+├─Tri-Beat_User_Manual.pdf
+└─ .gitignore
+
+------------------------------------------------------------------------
+## Support / Feedback
+
+Issues and feature requests: open a ticket on the GitHub repository.
+
+Quick Tour is available in-app via F1 or Reset Tour button in the bottom panel.
+
+------------------------------------------------------------------------
+## License
+This project is licensed under the MIT License. See the LICENSE file.
 This software was designed and developed by:
 
 **Danial Kooshki**\
