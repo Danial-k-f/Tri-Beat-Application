@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="dkJRuL" name="Tri-Beat" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
+  <MAINGROUP id="zxFBmP" name="Tri-Beat">
+    <GROUP id="{439C73E0-08A6-9749-4227-31C7B079838C}" name="Source">
+      <FILE id="KGRUVY" name="OnboardingOverlay.h" compile="0" resource="0"
+            file="Source/OnboardingOverlay.h"/>
+      <FILE id="g0m4sM" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="HISAEM" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="rZTUUf" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Tri-Beat"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Tri-Beat"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="F:/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="F:/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="F:/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="F:/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="F:/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="F:/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="F:/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="F:/JUCE/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
