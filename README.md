@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Logo.png" alt="Tri-Beat Logo" width="120"/>
+</p>
+
 # Tri-Beat Application
 
 ## Overview
