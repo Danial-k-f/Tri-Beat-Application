@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Logo.png" alt="Tri-Beat Logo" width="120"/>
+  <img src="Logo.png" alt="Tri-Beat Logo" width="360"/>
 </p>
 
 # Tri-Beat Application
